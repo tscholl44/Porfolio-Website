@@ -11,8 +11,16 @@
   --grid-item-background-color: #3498db;
   --grid-item-color: white;
   --grid-color-hover: #e74c3c;
+  --button-border-color: rgba(0, 0, 0, 0.3);
+  --sun-fill-color-0: #edc655;
+  --sun-fill-color-50: #fcffad;
+  --sun-fill-color-100: #f76414;
 
   --header-font-weight: 700;
+  --padding-regular: 20px;
+  --gap-regular: 10px;
+  --text-align-regular: center;
+  --font-size-grid: 22px
 }
 
 body {
@@ -74,7 +82,7 @@ button {
   padding: 10px;
   border-radius: 3px;
   /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
-  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+  border-bottom: 2px solid var(--button-border-color);
 }
 
 button:hover, button:focus {
@@ -100,7 +108,7 @@ button:hover, button:focus {
   clear: both;
   display: flex;
   flex-direction: column;
-  text-align: center;
+  text-align: var(--text-align-regular);
 }
 
 * {
@@ -110,7 +118,7 @@ button:hover, button:focus {
 .page-header {
   display: flex;
   width: 100%;
-  padding: 20px;
+  padding: var(--padding-regular);
 }
 
 .page-header__item {
@@ -144,7 +152,7 @@ button:hover, button:focus {
 }
 
 .grid__item {
-  background-color: var(--background-light)
+  background-color: var(--background-light);
 }
 
 
@@ -152,14 +160,14 @@ button:hover, button:focus {
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columns with equal width */
-  gap: 10px; /* gap between grid items */
+  gap: var(--gap-regular); /* gap between grid items */
 }
 
 .grid__item {
   background-color: var(--grid-item-background-color); /* default background color */
   color: var(--grid-item-color);
-  padding: 20px;
-  text-align: center;
+  padding: var(--padding-regular);
+  text-align: var(--text-align-regular);
   transition: transform 0.2s, background-color 0.2s; /* transition effect for transform and background-color */
 }
 
@@ -171,39 +179,39 @@ button:hover, button:focus {
 @media all and (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr;
-    grid-gap: 10px;
+    grid-gap: var(--gap-regular);
   }
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
   h1 {
-    font-size: 22px;
+    font-size: var(--font-size-grid);
   }
 }
 @media all and (min-width: 500px) and (max-width: 750px){
   .grid {
     grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
+    grid-gap: var(--gap-regular);
   }
   .grid__item:last-child {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
   h1 {
-    font-size: 22px;
+    font-size: var(--font-size-grid);
   }
 }
 
 @keyframes color-change {
   0% {
-    fill: #edc655;
+    fill: var(--sun-fill-color-0);
   }
   50% {
-    fill: #fcffad;
+    fill: var(--sun-fill-color-50);
   }
   100% {
-    fill: #f76414;
+    fill: var(--sun-fill-color-100);
   }
 }
 
