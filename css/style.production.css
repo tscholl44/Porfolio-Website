@@ -315,3 +315,25 @@ to {
 -webkit-animation: 34s cloud-move-reverse infinite alternate linear;
         animation: 34s cloud-move-reverse infinite alternate linear;
 }
+
+.spacer {
+height: 20px; /* Vertical space */
+}
+
+table, th, td {
+border: 1px solid black; /* Add border for gridlines */
+}
+
+th, td {
+padding: 8px; /* Adjust padding for cell spacing */
+text-align: center; /* Adjust text alignment as needed */
+}
+
+.skilltable {
+height: 100%;
+margin: 0;
+-webkit-box-pack: center;
+    -ms-flex-pack: center;
+        justify-content: center;
+}
+
