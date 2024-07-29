@@ -20,7 +20,7 @@
   --padding-regular: 20px;
   --gap-regular: 10px;
   --text-align-regular: center;
-  --font-size-grid: 22px
+  --font-size-grid: 22px;
 }
 
 body {
@@ -155,8 +155,6 @@ button:hover, button:focus {
   background-color: var(--background-light);
 }
 
-
-
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columns with equal width */
@@ -259,7 +257,14 @@ th, td {
 }
 
 .skilltable {
-  height: 100%;
-  margin: 0;
-  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%; 
+}
+
+.contact-profile {
+  margin-left: auto;
+  margin-right: auto;
+  /* Ensure the container has a defined width */
+  width: 50%; /* Adjust as needed */
 }

@@ -175,8 +175,6 @@ margin: 0 auto;
 background-color: lightgray;
 }
 
-
-
 .grid {
 display: -ms-grid;
 display: grid;
@@ -330,10 +328,14 @@ text-align: center; /* Adjust text alignment as needed */
 }
 
 .skilltable {
-height: 100%;
-margin: 0;
--webkit-box-pack: center;
-    -ms-flex-pack: center;
-        justify-content: center;
+margin-left: auto;
+margin-right: auto;
+width: 50%; 
 }
 
+.contact-profile {
+margin-left: auto;
+margin-right: auto;
+/* Ensure the container has a defined width */
+width: 50%; /* Adjust as needed */
+}
