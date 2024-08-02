@@ -131,6 +131,10 @@ display: inline-block;
 margin-left: 15px;
 }
 
+.standard-label-message {
+margin-top: 20px;
+}
+
 .grid {
 display: -ms-grid;
 display: grid;
@@ -338,4 +342,8 @@ margin-left: auto;
 margin-right: auto;
 /* Ensure the container has a defined width */
 width: 50%; /* Adjust as needed */
+}
+
+.no-underline {
+text-decoration: none;
 }
