@@ -136,13 +136,15 @@ margin-top: 20px;
 }
 
 .grid {
-display: -ms-grid;
-display: grid;
--ms-grid-columns: 300px 300px 300px;
-grid-template-columns: 300px 300px 300px;
--ms-grid-rows: 300px 300px;
-grid-template-rows: 300px 300px;
-margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 300px 300px;
+  gap: 20px;
+  justify-content: center; /* Center the grid horizontally */
+  align-items: center;     /* Center the grid vertically */
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;       /* Optional: limit grid width */
 }
 
 .grid > *:nth-child(1) {
@@ -361,4 +363,13 @@ text-decoration: none;
 }
 #project-modal {
   display: none;
+}
+.project-logo {
+  display: block;
+  margin: 0 auto 16px auto;
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(60,60,90,0.08);
 }
