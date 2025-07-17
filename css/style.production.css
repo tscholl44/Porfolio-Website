@@ -139,13 +139,12 @@ margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 300px 300px;
-  gap: 32px; /* Increased gap between cards */
+  gap: 32px; /* This controls both row and column spacing */
   justify-content: center;
   align-items: center;
-  margin: 0 auto 48px auto; /* Adds space below the grid */
+  margin: 0 auto 48px auto;
   width: 100%;
   max-width: 1000px;
-  row-gap: 32px;
 }
 
 .grid > *:nth-child(1) {
@@ -184,7 +183,6 @@ margin-top: 20px;
   border-radius: 18px;
   box-shadow: 0 4px 24px rgba(60, 60, 90, 0.12);
   padding: 32px 24px;
-  margin: 12px 12px;
   transition: transform 0.2s, box-shadow 0.2s;
   cursor: pointer;
   border: none;
