@@ -29,6 +29,10 @@ a {
 color: #00675c;
 }
 
+.work-title {
+  text-align: center;
+}
+
 a:visited {
 /* visited link */
 color: #4c2f91;
