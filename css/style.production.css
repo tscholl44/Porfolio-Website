@@ -138,10 +138,9 @@ margin-top: 20px;
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 300px 300px;
   gap: 32px; /* This controls both row and column spacing */
   justify-content: center;
-  align-items: center;
+  align-items: start; /* Use start for natural vertical flow */
   margin: 0 auto 48px auto;
   width: 100%;
   max-width: 1000px;
