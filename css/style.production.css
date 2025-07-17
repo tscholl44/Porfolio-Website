@@ -145,6 +145,7 @@ margin-top: 20px;
   margin: 0 auto 48px auto; /* Adds space below the grid */
   width: 100%;
   max-width: 1000px;
+  row-gap: 32px;
 }
 
 .grid > *:nth-child(1) {
