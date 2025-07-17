@@ -83,6 +83,18 @@
             </div>
          </section>
 
+         <div id="project-modal" class="modal" style="display:none;">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeModal()">&times;</span>
+    <h2 id="modal-title"></h2>
+    <img id="modal-screenshot" src="" alt="Project Screenshot" style="max-width:100%;border-radius:12px;">
+    <p id="modal-description"></p>
+    <ul id="modal-tech"></ul>
+    <div id="modal-links"></div>
+    <div id="modal-extra"></div>
+  </div>
+</div>
+
          <footer class="page-footer">
             <div>
                <p>Find me on</p>
@@ -98,5 +110,37 @@
             </div>
         </footer> 
         <script src="js/tota11y.min.js"></script>
+        <script>
+const projects = [
+  {
+    title: "Mobile web app",
+    description: "A mobile-first web application for tracking fitness goals.",
+    screenshot: "img/project1.png",
+    github: "https://github.com/tscholl44/project1",
+    live: "https://tscholl44.github.io/project1/",
+    tech: ["React", "CSS3", "REST API"],
+    extra: "<a href='img/project1-details.png' target='_blank'>More screenshots</a>"
+  },
+  // ...add five more project objects here...
+];
+
+document.querySelectorAll('.grid__item').forEach((card, idx) => {
+  card.onclick = function() {
+    const p = projects[idx];
+    document.getElementById('modal-title').textContent = p.title;
+    document.getElementById('modal-description').textContent = p.description;
+    document.getElementById('modal-screenshot').src = p.screenshot;
+    document.getElementById('modal-tech').innerHTML = p.tech.map(t => `<li>${t}</li>`).join('');
+    document.getElementById('modal-links').innerHTML =
+      `<a href="${p.github}" target="_blank">GitHub Repo</a> | <a href="${p.live}" target="_blank">Live App</a>`;
+    document.getElementById('modal-extra').innerHTML = p.extra;
+    document.getElementById('project-modal').style.display = 'block';
+  };
+});
+
+function closeModal() {
+  document.getElementById('project-modal').style.display = 'none';
+}
+</script>
     </body>
 </html>
