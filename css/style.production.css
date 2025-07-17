@@ -359,3 +359,6 @@ text-decoration: none;
   cursor: pointer;
   color: #333;
 }
+#project-modal {
+  display: none;
+}
