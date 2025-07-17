@@ -163,17 +163,17 @@ margin-top: 20px;
 }
 
 .grid > *:nth-child(4) {
-  -ms-grid-row: 2;
+  -ms-grid-row: 3;
   -ms-grid-column: 1;
 }
 
 .grid > *:nth-child(5) {
-  -ms-grid-row: 2;
+  -ms-grid-row: 3;
   -ms-grid-column: 2;
 }
 
 .grid > *:nth-child(6) {
-  -ms-grid-row: 2;
+  -ms-grid-row: 3;
   -ms-grid-column: 3;
 }
 
