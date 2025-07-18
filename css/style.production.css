@@ -259,7 +259,7 @@ margin-top: 20px;
 }
 
 .about-illustration .hillsandhouse-svg {
-  margin-top: -30px; /* Negative margin pulls the hills up closer to the clouds */
+  margin-top: -60px; /* Negative margin pulls the hills up closer to the clouds */
 }
 
 @media all and (max-width: 500px) {
