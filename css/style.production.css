@@ -242,6 +242,26 @@ margin-top: 20px;
   opacity: 0.92;
 }
 
+.about-illustration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.about-illustration .forest-illustration,
+.about-illustration .hillsandhouse-svg {
+  display: block;
+  width: 700px;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.about-illustration .hillsandhouse-svg {
+  margin-top: -30px; /* Negative margin pulls the hills up closer to the clouds */
+}
+
 @media all and (max-width: 500px) {
 .grid {
   -ms-grid-columns: 1fr;
