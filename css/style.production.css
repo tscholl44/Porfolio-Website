@@ -224,6 +224,24 @@ margin-top: 20px;
   word-break: break-word;
 }
 
+.fake-button {
+  display: inline-block;
+  margin-top: auto;
+  padding: 10px 22px;
+  background: linear-gradient(90deg, #357b70 0%, #489c79 100%);
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+  box-shadow: 0 2px 8px rgba(60,60,90,0.08);
+  user-select: none;
+  pointer-events: none; /* Makes it non-clickable */
+  text-align: center;
+  transition: background 0.2s;
+  opacity: 0.92;
+}
+
 @media all and (max-width: 500px) {
 .grid {
   -ms-grid-columns: 1fr;
