@@ -189,6 +189,13 @@ margin-top: 20px;
   transition: transform 0.2s, box-shadow 0.2s;
   cursor: pointer;
   border: none;
+  aspect-ratio: 1 / 1;      /* Makes each card a square */
+  height: auto;              /* Let aspect-ratio control the height */
+  overflow: hidden;          /* Prevents content from spilling out */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 .grid__item:hover {
   transform: scale(1.04) translateY(-4px);
