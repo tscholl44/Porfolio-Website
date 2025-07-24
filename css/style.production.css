@@ -1,13 +1,12 @@
 body {
-  background-color: lightgray;
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"><rect fill="%23fbfbf9" width="60" height="60"/><circle fill="%23f8f8f6" cx="30" cy="30" r="2"/><circle fill="%23f0f0ee" cx="10" cy="10" r="1"/><circle fill="%23f0f0ee" cx="50" cy="20" r="1"/><circle fill="%23f0f0ee" cx="20" cy="50" r="1"/></svg>');
+  background-color: #fbfbf9;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 16px;
-  /* Sets the font size to 16px */
   line-height: 1.6;
-  /* Sets the line-height to 1.6 */
+  margin: 0;
+  min-height: 100vh;
 }
 h1 {
 font-size: 30px;
@@ -54,33 +53,48 @@ border: none;
 /* takes the font from the outer container */
 font-family: inherit;
 /* styles the background color, font color, and text decoration (underline, etc.) of the button */
-background-color: #357b70;
-color: #d8ffc9;
+background-color: #6466af;
+color: white;
 text-decoration: none;
 /*adds spacing to the button (this will be discussed more in-depth later) */
-padding: 10px;
-border-radius: 3px;
+padding: 14px 28px;
+border-radius: 8px;
 /* gives the button a bottom border with a width of 2px, a type of solid, and a color in RGBA format */
-border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+box-shadow: 0 4px 12px rgba(100, 102, 175, 0.3);
+font-weight: 600;
+font-size: 16px;
+cursor: pointer;
+transition: all 0.3s ease;
+margin: 0 10px;
 }
 
 button:hover, button:focus {
 /* lets the mouse appear as a hand when hovering over the button */
 cursor: pointer;
 /* reduces the opacity of the button to 80% */
-opacity: 0.8;
+background-color: #5558a0;
+transform: translateY(-2px);
+box-shadow: 0 6px 16px rgba(100, 102, 175, 0.4);
 }
 
 .button__secondary {
-background-color: #2b2b2b;
-color: #d8ffc9;
+background-color: #8b8dd1;
+color: white;
+}
+
+.button__secondary:hover,
+.button__secondary:focus {
+background-color: #7a7cc9;
 }
 
 .profile__portrait {
-float: left;
-width: 250px;
-margin-right: 40px;
+display: block;
+margin: 0 auto 20px auto;
+width: 200px;
+height: 200px;
 border-radius: 50%;
+object-fit: cover;
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .page-footer {
@@ -106,6 +120,11 @@ display: -ms-flexbox;
 display: flex;
 width: 100%;
 padding: 20px;
+background-color: #6466af;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+position: sticky;
+top: 0;
+z-index: 1000;
 }
 
 .page-header__item {
@@ -126,13 +145,66 @@ max-width: 700px;
 margin: 0 auto;
 }
 
+/* Main content container for homepage */
+.main-content {
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: calc(100vh - 80px); /* Subtract header height */
+padding: 20px;
+}
+
+.content-card {
+background: white;
+border-radius: 20px;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+padding: 40px;
+max-width: 800px;
+width: 100%;
+text-align: center;
+transform: translateY(0);
+transition: transform 0.3s ease;
+}
+
+.content-card:hover {
+transform: translateY(-5px);
+box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
 .navigation-list {
 list-style-type: none;
+margin: 0;
+padding: 0;
+display: flex;
+gap: 15px;
 }
 
 .navigation-list li {
 display: inline-block;
-margin-left: 15px;
+margin-left: 0;
+}
+
+.navigation-list__item {
+display: inline-block;
+padding: 12px 20px;
+background-color: #8b8dd1;
+color: white !important;
+text-decoration: none;
+border-radius: 25px;
+transition: all 0.3s ease;
+font-weight: 500;
+}
+
+.navigation-list__item:hover,
+.navigation-list__item:focus {
+background-color: #a5a7d6;
+transform: translateY(-2px);
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+text-decoration: none;
+}
+
+.navigation-list__item--active {
+background-color: #9fa1d4;
 }
 
 .standard-label-message {
@@ -396,8 +468,83 @@ width: 50%;
 .contact-profile {
 margin-left: auto;
 margin-right: auto;
-/* Ensure the container has a defined width */
-width: 50%; /* Adjust as needed */
+width: 50%; 
+background: white;
+border-radius: 20px;
+box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+padding: 40px;
+margin-top: 40px;
+margin-bottom: 40px;
+}
+
+/* Contact Form Styling */
+#contact-form {
+max-width: 100%;
+margin-top: 30px;
+}
+
+.standard-label,
+.standard-label-message {
+display: block;
+margin-bottom: 8px;
+font-weight: 600;
+color: #333;
+}
+
+#contact-form input[type="email"],
+#contact-form input[type="tel"] {
+width: 100%;
+padding: 12px 16px;
+border: 2px solid #e1e5e9;
+border-radius: 8px;
+font-size: 16px;
+margin-bottom: 20px;
+transition: border-color 0.3s ease;
+font-family: inherit;
+}
+
+#contact-form input[type="email"]:focus,
+#contact-form input[type="tel"]:focus {
+outline: none;
+border-color: #6466af;
+box-shadow: 0 0 0 3px rgba(100, 102, 175, 0.1);
+}
+
+#contact-form textarea {
+width: 100%;
+padding: 12px 16px;
+border: 2px solid #e1e5e9;
+border-radius: 8px;
+font-size: 16px;
+margin-bottom: 20px;
+min-height: 120px;
+resize: vertical;
+transition: border-color 0.3s ease;
+font-family: inherit;
+}
+
+#contact-form textarea:focus {
+outline: none;
+border-color: #6466af;
+box-shadow: 0 0 0 3px rgba(100, 102, 175, 0.1);
+}
+
+#contact-form input[type="submit"] {
+background-color: #6466af;
+color: white;
+padding: 14px 30px;
+border: none;
+border-radius: 8px;
+font-size: 16px;
+font-weight: 600;
+cursor: pointer;
+transition: all 0.3s ease;
+}
+
+#contact-form input[type="submit"]:hover {
+background-color: #5558a0;
+transform: translateY(-2px);
+box-shadow: 0 4px 12px rgba(100, 102, 175, 0.3);
 }
 
 .no-underline {
