@@ -111,6 +111,12 @@ button:hover, button:focus {
   text-align: var(--text-align-regular);
 }
 
+.page-footer img {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+}
+
 * {
   box-sizing: border-box;
 }
