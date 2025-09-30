@@ -184,6 +184,60 @@ button:hover, button:focus {
   transform: scale(1.1); /* scale up by 10% on hover */
 }
 
+.case-study-section {
+  text-align: center;
+  margin: 60px auto 40px;
+  max-width: 700px;
+  padding: 0 20px;
+}
+
+.case-study-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.case-study-section p {
+  margin-bottom: 30px;
+  color: var(--dark-grey);
+  font-size: 16px;
+}
+
+.case-study-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--primary-color);
+  color: var(--button-primary-color);
+  text-decoration: none;
+  padding: 18px 36px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  border: 2px solid var(--button-border-color);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.case-study-button:hover {
+  background-color: var(--secondary-color);
+  color: var(--dark-grey);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+}
+
+.case-study-button:visited {
+  color: var(--button-primary-color);
+}
+
+.case-study-button:hover:visited {
+  color: var(--dark-grey);
+}
+
+.case-study-button svg {
+  flex-shrink: 0;
+}
+
 @media all and (max-width: 500px) {
   .grid {
     grid-template-columns: 1fr;
