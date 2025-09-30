@@ -205,33 +205,31 @@ button:hover, button:focus {
 .case-study-button {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 12px;
   background-color: var(--primary-color);
   color: var(--button-primary-color);
   text-decoration: none;
   padding: 18px 36px;
-  border-radius: 8px;
+  border-radius: 3px;
   font-size: 18px;
-  font-weight: 600;
-  border: 2px solid var(--button-border-color);
+  font-weight: 400;
+  font-family: inherit;
+  border: none;
+  border-bottom: 2px solid var(--button-border-color);
   transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  margin: 0 auto;
 }
 
 .case-study-button:hover {
-  background-color: var(--secondary-color);
-  color: var(--dark-grey);
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  opacity: 0.8;
   text-decoration: none;
 }
 
 .case-study-button:visited {
   color: var(--button-primary-color);
-}
-
-.case-study-button:hover:visited {
-  color: var(--dark-grey);
+  text-decoration: none;
 }
 
 .case-study-button svg {
